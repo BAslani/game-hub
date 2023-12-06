@@ -1,5 +1,6 @@
+import './App.css'
 const App = () => {
-  return <div>Game Hub</div>;
-};
+  return <h1>Game Hub</h1>
+}
 
-export default App;
+export default App
