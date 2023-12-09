@@ -1,5 +1,13 @@
+import SideBar from '../components/SideBar/SideBar'
+
 const HomePage = () => {
-  return <div>HomePage</div>
+  return (
+    <main className='px-4 lg:px-8'>
+      <aside>
+        <SideBar />
+      </aside>
+    </main>
+  )
 }
 
 export default HomePage
