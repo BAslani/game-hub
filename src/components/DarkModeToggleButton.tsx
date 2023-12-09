@@ -10,8 +10,8 @@ const DarkModeToggleButton = () => {
       >
         <i
           className={`absolute top-[2.5px] left-1 transition-all duration-200 ${
-            darkMode && 'translate-x-4'
-          } shadow rounded-full bg-white w-4 h-4`}
+            darkMode ? 'translate-x-4 bg-[#444]' : 'bg-white'
+          } shadow rounded-full  w-4 h-4`}
         ></i>
       </button>
       Dark Mode
