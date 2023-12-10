@@ -5,11 +5,11 @@ const SideBar = () => {
 
   return (
     <aside className={`w-screen transition-all max-md:${show ? '-translate-x-full' : 'translate-x-full'}`}>
-      <h2 className='font-bold text-3xl mb-4'>Genres</h2>
+      <h2 className='font-bold text-3xl mb-4 dark:text-gray-200'>Genres</h2>
       <ul className='flex flex-col gap-2'>
         {genres.map(genre => (
           <li key={genre.title} className=''>
-            <button className='flex flex-row gap-4 items-center'>
+            <button className='flex flex-row gap-4 items-center dark:text-gray-200'>
               <img src={genre.icon} alt='icon' className='w-10 h-10 rounded-lg' />
               {genre.title}
             </button>
