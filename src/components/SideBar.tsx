@@ -4,7 +4,7 @@ const SideBar = () => {
   const { genres, show } = useAppSelector(state => state.sidebar)
 
   return (
-    <aside className={`w-screen transition-all max-md:${show ? '-translate-x-full' : 'translate-x-full'}`}>
+    <aside className={`transition-all w-screen ${!show && '-translate-x-full'}`}>
       <h2 className='font-bold text-3xl mb-4 dark:text-gray-200'>Genres</h2>
       <ul className='flex flex-col gap-2'>
         {genres.map(genre => (
