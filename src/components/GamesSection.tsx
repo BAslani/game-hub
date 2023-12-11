@@ -1,17 +1,18 @@
 import { useGamesQuery } from '../store/api'
 import GameCard from './GameCard'
+import { type Game } from './GameCard'
 
 const GamesSection = () => {
-  const { error, data: games, isLoading } = useGamesQuery()
+  const { data, isLoading } = useGamesQuery()
 
   if (isLoading) return <div>Loading...</div>
-  if (error) return <div>Error occurred: {error?.message || 'Unknown error'}</div>
+  const games = data?.results
 
   return (
     <section className='flex flex-col gap-6 items-center'>
       <h1 className='text-5xl font-bold'>Games</h1>
       {games && games.length > 0 ? (
-        games.map(game => {
+        games.map((game: Game) => {
           return <GameCard key={game.id} game={game} />
         })
       ) : (
