@@ -1,6 +1,6 @@
 import { FaBars } from 'react-icons/fa'
 import { useAppDispatch } from '../store'
-import { toggleSideBar } from '../features/sideBar/sideBarSlice'
+import { toggleSideBar } from '../store/slices/sideBar/sideBarSlice'
 
 const SideBarToggleButton = () => {
   const dispatch = useAppDispatch()

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import RootLayout from './layouts/RootLayout.tsx'
-import store from './store.ts'
+import store from './store'
 import { Provider } from 'react-redux'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

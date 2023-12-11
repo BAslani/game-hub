@@ -1,4 +1,4 @@
-import { toggleDarkMode } from '../features/darkMode/darkModeSlice'
+import { toggleDarkMode } from '../store/slices/darkModeSlice'
 import { useAppDispatch, useAppSelector } from '../store'
 
 const DarkModeToggleButton = () => {
