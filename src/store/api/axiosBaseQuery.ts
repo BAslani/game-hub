@@ -3,19 +3,13 @@ import api from '../../services/axios'
 import type { AxiosError, AxiosRequestConfig } from 'axios'
 
 const axiosBaseQuery =
-  (): BaseQueryFn<
-    {
-      url: string
-      method: AxiosRequestConfig['method']
-      data?: AxiosRequestConfig['data']
-      params?: AxiosRequestConfig['params']
-    },
-    unknown,
-    unknown
-  > =>
-  async ({ url, method, data, params }) => {
+  (): BaseQueryFn<{
+    url: string
+    method: AxiosRequestConfig['method']
+  }> =>
+  async ({ url, method }) => {
     try {
-      const result = await api({ url, method, data, params })
+      const result = await api({ url, method })
       return { data: result.data }
     } catch (axiosError) {
       const err = axiosError as AxiosError

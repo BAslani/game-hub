@@ -10,7 +10,6 @@ const GamesSection = () => {
 
   return (
     <section className='flex flex-col gap-6 items-center'>
-      <h1 className='text-5xl font-bold'>Games</h1>
       {games && games.length > 0 ? (
         games.map((game: Game) => {
           return <GameCard key={game.id} game={game} />
