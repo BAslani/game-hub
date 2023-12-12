@@ -12,7 +12,7 @@ const store = configureStore({
     games: gamesSlice,
     [gamesApi.reducerPath]: gamesApi.reducer
   },
-  middleware: getDefaultMiddleware => getDefaultMiddleware({}).concat([gamesApi.middleware, gamesApi.middleware])
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat([gamesApi.middleware, gamesApi.middleware])
 })
 
 export default store
