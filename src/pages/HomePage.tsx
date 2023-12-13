@@ -3,7 +3,7 @@ import SideBar from '../components/SideBar'
 
 const HomePage = () => {
   return (
-    <main className='flex flex-col gap-8 md:flex-row md:gap-12 px-4 lg:px-8'>
+    <main className='flex flex-col gap-8 md:flex-row md:gap-16 px-4 lg:px-8'>
       <SideBar />
       <GamesSection />
     </main>
