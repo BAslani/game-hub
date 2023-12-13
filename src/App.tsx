@@ -9,7 +9,7 @@ const App = () => {
   const { darkMode } = useAppSelector(state => state.darkMode)
   return (
     <div className={`h-full w-full overflow-hidden ${darkMode && 'dark'}`}>
-      <div className='h-full overflow-y-auto dark:bg-[#222]'>
+      <div className='h-full w-screen overflow-y-auto dark:bg-[#222]'>
         <Navbar />
         <Routes>
           <Route index element={<HomePage />} />

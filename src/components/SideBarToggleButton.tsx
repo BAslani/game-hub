@@ -7,7 +7,7 @@ const SideBarToggleButton = () => {
 
   return (
     <button className='md:hidden' onClick={() => dispatch(toggleSideBar())}>
-      <FaBars className='text-3xl' />
+      <FaBars className='text-3xl dark:text-slate-200' />
     </button>
   )
 }

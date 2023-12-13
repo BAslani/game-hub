@@ -17,7 +17,11 @@ const SideBar = () => {
   if (isLoading) return <LoadingSpinner />
 
   return (
-    <aside className={`transition-all max-md:w-screen ${!show && '-translate-x-full'} md:translate-x-0`}>
+    <aside
+      className={`transition-all max-md:w-full ${
+        !show && '-translate-x-full'
+      } max-md:absolute z-10 bg-white dark:bg-[#222] md:translate-x-0`}
+    >
       <h2 className='font-bold text-3xl mb-4 dark:text-gray-200'>Genres</h2>
       <ul className='flex flex-col gap-3'>
         {genres.map((genre: Genre) => (
