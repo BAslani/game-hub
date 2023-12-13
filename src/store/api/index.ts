@@ -10,9 +10,15 @@ const gamesApi = createApi({
         url: '/games',
         method: 'GET'
       })
+    }),
+    genres: builder.query<any, void>({
+      query: () => ({
+        url: '/genres',
+        method: 'GET'
+      })
     })
   })
 })
 
-export const { useGamesQuery } = gamesApi
+export const { useGamesQuery, useGenresQuery } = gamesApi
 export default gamesApi
