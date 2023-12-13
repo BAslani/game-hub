@@ -18,21 +18,25 @@ export type Game = {
 
 const GameCard: FC<{ game: Game }> = ({ game }) => {
   return (
-    <article className='bg-gray-100 dark:bg-[#333] rounded-xl w-80'>
-      <img src={game.background_image} alt='game' className='rounded-t-xl w-full' />
-      <div className='flex flex-col gap-4 max-w-[90%] mx-auto py-4'>
-        <div className='flex w-full justify-between mx-auto'>
-          <PlatformList platforms={game.parent_platforms?.map(p => p.platform)} />
-          <div className='bg-[#3E5641] rounded px-1'>
-            <p className='text-green-300'>{game.metacritic}</p>
+    <article className='relative bg-gray-100 dark:bg-[#333] rounded-xl w-72 h-[22rem] self-start'>
+      <img src={game.background_image} alt='game' className='rounded-t-xl w-full h-[11rem]' />
+      <div className='flex flex-col max-w-[90%] mx-auto py-4'>
+        <div className='flex flex-col gap-4'>
+          <div className='flex w-full justify-between mx-auto'>
+            <PlatformList platforms={game.parent_platforms?.map(p => p.platform)} />
+            <div className='bg-[#3E5641] rounded px-1'>
+              <p className='text-green-300'>{game.metacritic}</p>
+            </div>
           </div>
+          <h3 className='text-2xl font-bold dark:text-slate-200'>{game.name}</h3>
         </div>
-        <h3 className='text-2xl font-bold dark:text-slate-200'>{game.name}</h3>
-        {game.rating_top === 5 ? (
-          <img src='/public/images/bulls-eye.webp' alt='bulls' className='w-8' />
-        ) : (
-          <img src='/public/images/thumbs-up.webp' alt='bulls' className='w-8' />
-        )}
+        <div className='absolute bottom-3'>
+          {game.rating_top === 5 ? (
+            <img src='/public/images/bulls-eye.webp' alt='bulls' className='w-8' />
+          ) : (
+            <img src='/public/images/thumbs-up.webp' alt='bulls' className='w-8' />
+          )}
+        </div>
       </div>
     </article>
   )
