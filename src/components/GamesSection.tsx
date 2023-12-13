@@ -1,11 +1,12 @@
 import { useGamesQuery } from '../store/api'
 import GameCard from './GameCard'
 import { type Game } from './GameCard'
+import SkeletonLoadingSection from './SkeletonLoadingSection'
 
 const GamesSection = () => {
   const { data, isLoading } = useGamesQuery()
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <SkeletonLoadingSection />
   const games = data?.results
 
   return (
